@@ -1,0 +1,14 @@
+version: '3'
+services:
+  database:
+    image: docker.io/library/mysql
+    ports:
+      - '3306:3306'
+    network_mode: bridge
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+    volumes:
+      - mysql_volume:/var/lib/mysql
+
+volumes:
+  mysql_volume: {}
