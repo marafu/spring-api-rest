@@ -3,10 +3,7 @@ package ga.cosse.algafood.infra.repository;
 import ga.cosse.algafood.domain.entity.Cuisine;
 import ga.cosse.algafood.domain.repository.CuisineRepository;
 import ga.cosse.algafood.infra.exception.DatabaseRepositoryException;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
-import org.springframework.jdbc.core.namedparam.EmptySqlParameterSource;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
@@ -40,13 +37,13 @@ public class CuisineRepositoryDatabaseMySQL implements CuisineRepository {
     public Optional<Cuisine> listByName(String name) {
         try {
             Statement statement = this.connection.createStatement();
-            ResultSet result = statement.executeQuery("SELECT * FROM cuisine WHERE name = \""+ name + "\"");
+            ResultSet result = statement.executeQuery("SELECT * FROM cuisine WHERE name = \""+ name + "\""); // I know this is insecure
             Cuisine cuisine = new Cuisine();
             while (result.next()) {
                 cuisine.setId(result.getLong("id"));
                 cuisine.setName(result.getString("name"));
             }
-            return Optional.of(cuisine);
+            return cuisine.getId() != null ? Optional.of(cuisine) : Optional.empty();
         } catch (SQLException ex) {
             return Optional.empty();
         }
@@ -71,10 +68,10 @@ public class CuisineRepositoryDatabaseMySQL implements CuisineRepository {
     @Override
     public Cuisine save(Cuisine cuisine) {
         try {
-            String query = "INSERT INTO cuisine(name) VALUES (\""+cuisine.getName()+"\")";
+            String query = "INSERT INTO cuisine(name) VALUES (\""+cuisine.getName()+"\")"; // I know is this insecure
             PreparedStatement statement = this.connection.prepareStatement(query);
             statement.execute();
-            ResultSet result = this.connection.createStatement().executeQuery("SELECT * FROM cuisine WHERE name = \"" + cuisine.getName() + "\"");
+            ResultSet result = this.connection.createStatement().executeQuery("SELECT * FROM cuisine WHERE name = \"" + cuisine.getName() + "\""); // I know is this insecure
             while (result.next()) {
                 cuisine.setId(result.getLong("id"));
             }

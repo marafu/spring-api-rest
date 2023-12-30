@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Service
 public class RegisterCuisine {
-    private CuisineRepository cuisineRepository;
+    private final CuisineRepository cuisineRepository;
     public RegisterCuisine(CuisineRepository cuisineRepository) {
         this.cuisineRepository = cuisineRepository;
     }
@@ -19,11 +19,11 @@ public class RegisterCuisine {
         return this.cuisineRepository.save(cuisine);
     }
 
-
     private void verifyDuplication(String name) {
         Optional<Cuisine> cuisineOptional = this.cuisineRepository.listByName(name);
-        if(cuisineOptional.get().getId() != null)  {
-            throw new DuplicateCuisine();
+        if (cuisineOptional.isEmpty()) {
+            return;
         }
+        throw new DuplicateCuisine();
     }
 }
