@@ -1,10 +1,10 @@
-package ga.cosse.algafood.unit.domain.service;
+package ga.cosse.sprigrestapi.unit.domain.service;
 
-import ga.cosse.algafood.domain.exception.DuplicateCuisine;
-import ga.cosse.algafood.domain.repository.CuisineRepository;
-import ga.cosse.algafood.domain.service.RegisterCuisine;
-import ga.cosse.algafood.infra.repository.CuisineRepositoryDatabaseMySQL;
-import ga.cosse.algafood.infra.repository.CuisineRepositoryMemory;
+import ga.cosse.sprigrestapi.domain.exception.DuplicateCuisine;
+import ga.cosse.sprigrestapi.domain.repository.CuisineRepository;
+import ga.cosse.sprigrestapi.domain.service.RegisterCuisine;
+import ga.cosse.sprigrestapi.infra.repository.CuisineRepositoryDatabaseMySQL;
+import ga.cosse.sprigrestapi.infra.repository.CuisineRepositoryMemory;
 import org.junit.jupiter.api.*;
 
 import java.sql.Connection;

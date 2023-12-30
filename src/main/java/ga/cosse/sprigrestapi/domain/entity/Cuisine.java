@@ -1,4 +1,4 @@
-package ga.cosse.algafood.domain.entity;
+package ga.cosse.sprigrestapi.domain.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

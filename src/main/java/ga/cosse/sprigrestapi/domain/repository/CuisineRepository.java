@@ -1,6 +1,6 @@
-package ga.cosse.algafood.domain.repository;
+package ga.cosse.sprigrestapi.domain.repository;
 
-import ga.cosse.algafood.domain.entity.Cuisine;
+import ga.cosse.sprigrestapi.domain.entity.Cuisine;
 
 import java.util.List;
 import java.util.Optional;

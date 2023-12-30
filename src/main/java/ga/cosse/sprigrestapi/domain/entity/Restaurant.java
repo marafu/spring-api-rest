@@ -1,9 +1,7 @@
-package ga.cosse.algafood.domain.entity;
+package ga.cosse.sprigrestapi.domain.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import org.hibernate.validator.constraints.UniqueElements;
-import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

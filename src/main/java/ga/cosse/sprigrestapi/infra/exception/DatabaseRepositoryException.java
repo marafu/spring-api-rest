@@ -1,4 +1,4 @@
-package ga.cosse.algafood.infra.exception;
+package ga.cosse.sprigrestapi.infra.exception;
 
 public class DatabaseRepositoryException extends RuntimeException {
     final String message;

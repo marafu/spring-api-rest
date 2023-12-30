@@ -1,8 +1,8 @@
-package ga.cosse.algafood.domain.service;
+package ga.cosse.sprigrestapi.domain.service;
 
-import ga.cosse.algafood.domain.entity.Cuisine;
-import ga.cosse.algafood.domain.exception.DuplicateCuisine;
-import ga.cosse.algafood.domain.repository.CuisineRepository;
+import ga.cosse.sprigrestapi.domain.entity.Cuisine;
+import ga.cosse.sprigrestapi.domain.exception.DuplicateCuisine;
+import ga.cosse.sprigrestapi.domain.repository.CuisineRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

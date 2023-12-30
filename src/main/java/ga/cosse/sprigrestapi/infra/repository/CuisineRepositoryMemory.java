@@ -1,14 +1,13 @@
-package ga.cosse.algafood.infra.repository;
+package ga.cosse.sprigrestapi.infra.repository;
 
 
-import ga.cosse.algafood.domain.entity.Cuisine;
-import ga.cosse.algafood.domain.repository.CuisineRepository;
+import ga.cosse.sprigrestapi.domain.entity.Cuisine;
+import ga.cosse.sprigrestapi.domain.repository.CuisineRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
 
 @Component
 public class CuisineRepositoryMemory implements CuisineRepository  {

@@ -1,4 +1,4 @@
-package ga.cosse.algafood.domain.exception;
+package ga.cosse.sprigrestapi.domain.exception;
 
 public class DuplicateCuisine extends RuntimeException {
 }

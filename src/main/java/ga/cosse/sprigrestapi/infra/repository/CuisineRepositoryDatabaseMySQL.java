@@ -1,8 +1,8 @@
-package ga.cosse.algafood.infra.repository;
+package ga.cosse.sprigrestapi.infra.repository;
 
-import ga.cosse.algafood.domain.entity.Cuisine;
-import ga.cosse.algafood.domain.repository.CuisineRepository;
-import ga.cosse.algafood.infra.exception.DatabaseRepositoryException;
+import ga.cosse.sprigrestapi.domain.entity.Cuisine;
+import ga.cosse.sprigrestapi.domain.repository.CuisineRepository;
+import ga.cosse.sprigrestapi.infra.exception.DatabaseRepositoryException;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
